@@ -54,4 +54,17 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
   const index = () => import(/* webpackChunkName: "index" */ "@/views/index.vue")
   ```
 
+- editorconfig 统一代码编辑风格
+
+  ```
+  [editorconfig](https://juejin.im/post/5b9cba4c6fb9a05cf67a79a4)
+  注意需要在vscode上安装editorconfig插件
+  ```
+
+- px 转换 rem (postcss-pxtorem)
+
+  ```
+  https://juejin.im/post/5a716c4c6fb9a01cb42cac4b
+  ```
+
 - 补充目录结构？
