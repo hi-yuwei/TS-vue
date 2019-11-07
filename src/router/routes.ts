@@ -1,21 +1,26 @@
-const Layout = () => import(/* webpackChunkName: "Layout" */ "../views/Layout/index.vue")
-const Home = () => import(/* webpackChunkName: "home" */ "../views/Home.vue")
-const About = () => import(/* webpackChunkName: "about" */ "../views/About.vue")
+import layout from "@/views/layout/index.vue"
+
+const index = () => import(/* webpackChunkName: "index" */ "@/views/index.vue")
+const login = () => import(/* webpackChunkName: "login" */ "@/views/login/index.vue")
+const admin = () => import(/* webpackChunkName: "admin" */ "@/views/admin/index.vue")
 
 export default [
   {
     path: "/",
-    name: "home",
-    component: Home
+    component: index
+  },
+  {
+    path: "/login",
+    component: login
   },
   {
     path: "/admin",
-    component: Layout,
+    component: layout,
+    redirect: "/admin/index",
     children: [
       {
-        path: "about",
-        name: "about",
-        component: Home
+        path: "index",
+        component: admin
       }
     ]
   }
